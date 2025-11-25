@@ -9,18 +9,25 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import Title from '../../components/Title/Title';
 import styles from './Login.module.css';
 import { signIn } from '../../Handlers/RequestHandler';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { appContext } from '../../context/AppContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const {localUser, setLocalUser, setAuthenticated} = useContext(appContext);  
+    const navigate = useNavigate();
 
     const handleSignIn = (e) => {
         e.preventDefault();
         signIn(email, password)
         .then((res) => {
-            console.log(res);
+            setLocalUser(res);
+            setAuthenticated(true);
+            navigate('/home');
+            console.log(localUser);
         })
         .catch((e) => {
             console.log('Sign in error:', e);
@@ -42,7 +49,6 @@ const Login = () => {
                         <PrimaryButton onClick={handleSignIn}>Sign In</PrimaryButton>
                         <LinkButton link= "signup" pageButton={true}>Don't have an account Sign up?</LinkButton>
                     </form>
-
                 </Card>
 
                 <LinkButton link= "#">Continue as guest <AiOutlineArrowRight/> </LinkButton>

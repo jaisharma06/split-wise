@@ -1,6 +1,7 @@
 .sideBarContainer{
     height: 100vh;
     width: 20%;
+    max-width: 250px;
     position: fixed;
     z-index: 100000;
     background-color: white;
@@ -8,4 +9,46 @@
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     padding: 20px;
+}
+
+.profileContainer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-50%);
+     border-top:1px solid #e3e3e3;
+}
+
+.profileSection{
+    width: 90%;
+    margin: auto;
+    height: 70px ;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.profilePicture{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 76, 103);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userName {
+    font-size: medium;
+}
+
+.usernameInitial{
+    font-size: medium;
 }
