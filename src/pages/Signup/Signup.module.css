@@ -1,0 +1,22 @@
+.loginContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer{
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap:20px;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap:20px;
+}

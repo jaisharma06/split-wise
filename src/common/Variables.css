@@ -1,0 +1,4 @@
+:root{
+    --primary-btn-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
+    --border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+@import url('../../common/Variables.css');
+
+.inputContainer{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.input{
+    padding: 12px 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #e3e3e3;
+    font-size: medium;
+
+}
+
+.input:active,
+.input:focus{
+    outline-width: 1px;
+    outline-color: var(--primary-btn-color);
+}
+
+.title{
+    font-weight: 600;
+    font-size: small;
+}

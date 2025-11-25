@@ -1,0 +1,21 @@
+.primaryBtn{
+    background-color: var(--primary-btn-color);
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.primaryBtn:hover{
+    background-color: rgb(48 42 141);
+    transition: all 0.2s;
+}
+
+.primaryBtn:active{
+    transform: scale(0.99);
+    transition: all 0.2s;
+}

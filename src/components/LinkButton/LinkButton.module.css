@@ -1,0 +1,43 @@
+.pageLinkBtn{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--primary-btn-color);
+    transition: all 0.2s;
+}
+
+.pageLinkBtn:hover{
+    text-decoration: underline; 
+    transition: all 0.2s;
+}
+
+.pageLinkBtn:active{
+    transform: scale(0.99);
+    transition: all 0.2s;
+}
+
+.linkBtn{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: #9c9c9c;
+    transition: all 0.5s;
+    align-items: center;
+}
+
+.linkBtn:hover{
+    color: var(--primary-btn-color);
+    transition: all 0.5s;
+}
+
+.linkBtn:active{
+    transform: scale(0.99);
+    transition: all 0.5s;
+}

@@ -1,0 +1,38 @@
+@import '../../common/Variables.css';
+
+.googleBtn{
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 100%;
+    padding: 10px 0;
+    border-radius: var(--border-radius);
+    border: 1px solid #e3e3e3  !important;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+.googleBtn:hover{
+    background-color: rgb(243, 243, 243);
+    transition: all 0.2s;
+}
+
+.googleBtn:active{
+    transform: scale(0.99);
+    transition: all 0.2s;
+}
+
+.buttonText{
+    font-size: medium;
+    font-weight: 550;
+}
+
+.icon{
+    font-size: medium;
+}
