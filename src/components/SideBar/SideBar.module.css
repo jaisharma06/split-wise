@@ -1,22 +1,21 @@
 .sideBarContainer{
     height: 100vh;
-    width: 220px;
-    position: fixed;
+    width: 250px;
     z-index: 100000;
     background-color: white;
     left: 0;
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    padding: 20px;
+    padding: 15px 15px 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .profileContainer{
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-50%);
-     border-top:1px solid #e3e3e3;
+    border-top:1px solid #e3e3e3;
+    margin-top: auto;
 }
 
 .profileSection{
@@ -27,7 +26,6 @@
     flex-flow: row;
     flex-direction: row;
     align-items: center;
-    column-gap: 20px;
     justify-content: flex-start;
     gap: 15px;
 }

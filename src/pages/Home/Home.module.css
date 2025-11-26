@@ -1,0 +1,67 @@
+.homeContainer{
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap:20px;
+}
+
+.userDuesContainer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.dueCard{
+    width: 33.33%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.totalDueCard{
+    background-color: var(--primary-btn-color) !important;
+}
+
+.leftSide, .rightSide{
+    width: 100%;
+    height: 100%;
+}
+
+.rightSide{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: xx-large;
+    color:rgba(255, 255, 255, 0.5);
+}
+
+.leftSide{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap:5px;
+}
+
+.totalBalanceTitle{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: large;
+}
+
+.remainingBalance{
+    color: white;
+}
