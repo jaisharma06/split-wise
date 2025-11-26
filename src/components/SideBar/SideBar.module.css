@@ -1,7 +1,6 @@
 .sideBarContainer{
     height: 100vh;
-    width: 20%;
-    max-width: 250px;
+    width: 220px;
     position: fixed;
     z-index: 100000;
     background-color: white;
@@ -51,4 +50,41 @@
 
 .usernameInitial{
     font-size: medium;
+}
+
+.sideBarMenu{
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebarMenuButton{
+    border-radius: var(--border-radius);
+    border: none!important;
+    background-color: transparent;
+    font-size: medium;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    gap:10px;
+    color: rgb(110, 110, 110);
+    padding: 10px;
+}
+
+.sidebarMenuButton:hover{
+    cursor: pointer;
+    background-color: #e3e3e3;
+    color:rgb(46, 46, 46);
+}
+
+.sidebarMenuButton:active{
+    color: var(--primary-btn-color);
+    background-color: rgb(238, 238, 250);
+}
+
+.sideBarMenuButtonActive{
+    color: var(--primary-btn-color);
+    background-color: rgb(238, 238, 250);
 }

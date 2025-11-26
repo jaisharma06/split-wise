@@ -1,0 +1,68 @@
+.settingsContainer{
+    width: 500px;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap: 0px;
+    margin: 50px auto 0px auto;
+}
+
+.subTitle{
+    color: rgb(141, 140, 140);
+    text-transform: uppercase;
+}
+
+.profileForm{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profileSection{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 108, 108);
+
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileInitial{
+    color: white;
+}
+
+.logoutButton{
+    margin: 50px auto 0 auto;
+    width: 100%;
+    background-color: rgb(252, 227, 227);
+    color:rgb(199, 14, 14);
+    border: 1px solid rgb(255, 194, 194);
+    border-radius: var(--border-radius);
+    font-size: medium;
+    font-weight: 600;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.logoutButton:hover{
+    background-color: rgb(255, 194, 194);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logoutButton:active{
+    transform: scale(0.99);
+    transition: all 0.2s;
+}

@@ -4,3 +4,8 @@ body{
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+.pageContainer{
+  width: 100% - 220px;
+  margin-right: auto;
+}
