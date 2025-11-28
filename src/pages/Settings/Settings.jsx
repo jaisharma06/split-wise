@@ -24,10 +24,6 @@ const Settings = () => {
                 <h2 className={styles.title}>Settings</h2>
                 <h4 className={styles.subTitle}>Profile</h4>
                 <Card>
-                    <span className={styles.profileSection}>
-                        <h1 className={styles.profileInitial}>{name.substring(0,1)}</h1>
-                    </span>
-
                     <form className={styles.profileForm}> 
                         <Input type='text' name='Name' value={name} onChange={(e)=>{setName(e.target.value)}}/>
                         <Input type='email' name='Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
