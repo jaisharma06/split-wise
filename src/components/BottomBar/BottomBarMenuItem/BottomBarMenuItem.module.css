@@ -1,0 +1,28 @@
+.bottomBarMenuItem{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: var(--font-lg);
+    cursor: pointer;
+}
+
+.title{
+    margin: 0;
+    font-size: var(--font-sm);
+    font-weight: 600;
+}
+
+.bottomBarMenuItem:hover{
+    color: var(--primary-btn-color);
+}
+
+.bottomBarMenuItem:active{
+    color: var(--primary-btn-color); 
+}
+
+.bottomBarMenuItemActive{
+    color: var(--primary-btn-color); 
+}

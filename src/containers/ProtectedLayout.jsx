@@ -19,7 +19,7 @@ const ProtectedLayout = () => {
     <div className={styles.protectedContainer}>
       <SideBar menuButtons={menuButtons} />
       <TopBar />
-      <BottomBar/>
+      <BottomBar menuButtons={menuButtons}/>
       <div className={styles.outletContainer}>
         <Outlet />
       </div>

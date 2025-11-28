@@ -11,6 +11,8 @@
     bottom: 0;
     background-color: white;
     padding: 0 40px;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 @media (min-width: 1024px) {
