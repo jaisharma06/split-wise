@@ -44,7 +44,7 @@
     color:rgb(199, 14, 14);
     border: 1px solid rgb(255, 194, 194);
     border-radius: var(--border-radius);
-    font-size: medium;
+    font-size: var(--font-md);
     font-weight: 600;
     height: 40px;
     display: flex;

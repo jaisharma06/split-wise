@@ -1,8 +1,11 @@
+import styles from "./ProtectedLayout.module.css";
 import SideBar from "../components/SideBar/SideBar";
 import { Outlet } from "react-router-dom";
 import { AiFillSetting, AiFillDashboard } from "react-icons/ai";
 import { MdGroups } from "react-icons/md";
 import { FiActivity } from "react-icons/fi";
+import TopBar from "../components/TopBar/TopBar";
+import BottomBar from "../components/BottomBar/BottomBar";
 
 const menuButtons = [
   { icon: <AiFillDashboard />, name: "Dashboard", link: "/home" },
@@ -13,9 +16,11 @@ const menuButtons = [
 
 const ProtectedLayout = () => {
   return (
-    <div style={{ display: "flex" }}>
+    <div className={styles.protectedContainer}>
       <SideBar menuButtons={menuButtons} />
-      <div style={{ flex: 1 }}>
+      <TopBar />
+      <BottomBar/>
+      <div className={styles.outletContainer}>
         <Outlet />
       </div>
     </div>

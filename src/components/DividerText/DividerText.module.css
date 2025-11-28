@@ -23,6 +23,6 @@
 
 .text{
   text-transform: uppercase;
-  font-size: small;
+  font-size: var(--font-sm);
   font-weight: 300;
 }

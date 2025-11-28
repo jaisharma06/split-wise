@@ -1,4 +1,11 @@
 :root{
     --primary-btn-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
     --border-radius: 10px;
+    --font-xs:   clamp(0.55rem, 0.6vw, 0.85rem);
+    --font-sm:   clamp(0.7rem, 0.8vw, 1rem);
+    --font-md:   clamp(0.85rem, 1vw, 1.25rem);
+    --font-lg:   clamp(1.1rem, 1.7vw, 1.75rem);
+    --font-xl:   clamp(1.4rem, 2.5vw, 2.5rem);
+    --font-xxl:  clamp(1.8rem, 3.5vw, 3.5rem);
+    --font-xxxl: clamp(2.2rem, 5vw, 4.8rem);
 }

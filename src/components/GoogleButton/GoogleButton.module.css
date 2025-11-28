@@ -29,10 +29,10 @@
 }
 
 .buttonText{
-    font-size: medium;
+    font-size: var( --font-md);
     font-weight: 550;
 }
 
 .icon{
-    font-size: medium;
+    font-size: var( --font-md);
 }

@@ -6,6 +6,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import Home from "../pages/Home/Home";
 import Settings from "../pages/Settings/Settings";
 import ProtectedLayout from "./ProtectedLayout";
+import Activity from "../pages/Activity/Activity";
+import Groups from "../pages/Groups/Groups";
 
 
 
@@ -24,6 +26,8 @@ const AppContainer = () => {
           >
             <Route path='/home' element = {<Home/>}/> 
             <Route path='/settings' element = {<Settings/>}/>
+            <Route path='/activity' element = {<Activity/>}/>
+            <Route path='/groups' element = {<Groups/>}/>
           </Route>
 
           <Route path="/" element={<Login />} />

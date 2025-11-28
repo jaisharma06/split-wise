@@ -12,16 +12,15 @@
 
 .userDuesContainer{
     width: 100%;
-    height: 200px;
     display: flex;
-    flex-flow: row;
-    flex-direction: row;
+    flex-flow: column;
+    flex-direction: column;
     gap: 40px;
 }
 
 .dueCard{
-    width: 33.33%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
     border-radius: var(--border-radius);
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -37,31 +36,84 @@
 }
 
 .leftSide, .rightSide{
-    width: 100%;
     height: 100%;
 }
 
 .rightSide{
+    width: 20%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    font-size: xx-large;
-    color:rgba(255, 255, 255, 0.5);
+    font-size: var(--font-xxl);
+}
+
+.whiteColor{
+    color: rgba(255, 255, 255, 1);
+}
+
+.blackColor{
+    color: #323232;
 }
 
 .leftSide{
+    width: 100%;
     display: flex;
     flex-flow: column;
     flex-direction: column;
     gap:5px;
 }
 
-.totalBalanceTitle{
-    font-weight: 600;
+.greyColor{
     color: rgba(255, 255, 255, 0.5);
-    font-size: large;
 }
 
-.remainingBalance{
-    color: white;
+.totalBalanceTitle{
+    font-weight: 600;
+    font-size: var(--font-lg);
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.upArrow, .downArrow{
+    font-size: var(--font-xl);
+}
+
+.upArrow{
+    color:rgb(115, 192, 0);
+}
+
+.downArrow{
+    color:rgb(192, 0, 0);
+
+}
+
+.iconContainer{
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-lg);
+}
+
+.largeFont{
+    font-size: var(--font-xl);
+}
+
+
+@media (min-width: 1024px) {
+    .userDuesContainer{
+        flex-flow: row;
+        flex-direction: row;
+    }
+
+    .dueCard{
+        width: 33.33%;
+    }
 }

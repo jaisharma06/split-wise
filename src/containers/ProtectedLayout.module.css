@@ -1,0 +1,15 @@
+.protectedContainer{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.outletContainer{
+    flex: 1;
+    padding: 70px 0;
+}
+
+@media (min-width: 1024px){
+    .outletContainer{
+        padding: 0;
+    }
+}

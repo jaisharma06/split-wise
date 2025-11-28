@@ -1,7 +1,7 @@
 .primaryBtn{
     background-color: var(--primary-btn-color);
     color: white;
-    font-size: medium;
+    font-size: var( --font-md);
     padding: 10px;
     border-radius: var(--border-radius);
     border: none;

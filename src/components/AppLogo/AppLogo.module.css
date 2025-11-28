@@ -1,6 +1,6 @@
 @import  '../../common/Variables.css';
 
 .appLogo{
-    font-size: 60px;
+    font-size: var(--font-xxxl);
     color: var(--primary-btn-color);
 }
