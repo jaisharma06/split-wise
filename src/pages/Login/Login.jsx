@@ -50,8 +50,8 @@ const Login = () => {
     }
 
     return (
-      <PageTransition>
-        <div className={styles.loginContainer}>
+      <div className={styles.loginContainer}>
+        <PageTransition>
           <div className={styles.cardContainer}>
             <Card>
               <AppLogo />
@@ -93,8 +93,8 @@ const Login = () => {
               Continue as guest <AiOutlineArrowRight />{" "}
             </LinkButton>
           </div>
-        </div>
-      </PageTransition>
+        </PageTransition>
+      </div>
     );
 }
 

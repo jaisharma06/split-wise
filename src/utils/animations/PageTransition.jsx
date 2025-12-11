@@ -7,32 +7,43 @@ export default function PageTransition({ children }) {
   useLayoutEffect(() => {
     const el = container.current;
 
+    // Entrance animation
     gsap.fromTo(
       el,
-      { x: 80, opacity: 0 },  // from right
+      { 
+        x: "100%",       // start offscreen right
+        opacity: 0,      // invisible
+        scale: 0.8,      // smaller
+        rotation: 10,    // slight rotation
+        skewX: 10         // skew for dynamic effect
+      },
       {
         x: 0,
         opacity: 1,
-        duration: 0.6,
+        scale: 1,
+        rotation: 0,
+        skewX: 0,
+        duration: 0.8,
         ease: "power3.out",
       }
     );
 
+    // Exit animation
     return () => {
       gsap.to(el, {
-        x: -80,
+        x: "-100%",      // slide off left
         opacity: 0,
-        duration: 0.4,
+        scale: 0.8,
+        rotation: -10,
+        skewX: -10,
+        duration: 0.6,
         ease: "power3.in",
       });
     };
   }, []);
 
   return (
-    <div
-      ref={container}
-      style={{ width: "100%", height: "100%" }}
-    >
+    <div ref={container} style={{ willChange: "transform, opacity" }}>
       {children}
     </div>
   );
