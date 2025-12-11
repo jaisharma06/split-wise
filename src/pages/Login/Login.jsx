@@ -12,16 +12,31 @@ import { signIn } from '../../Handlers/RequestHandler';
 import { useContext, useState } from 'react';
 import { appContext } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';
+import PageTransition from '../../utils/animations/PageTransition';
+import {validateEmailAndPassword } from '../../utils/validators/Validator';
 
 const Login = () => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [passwordError, setPasswordError] = useState("")
+    const [emailError, setEmailError] = useState("")
     const {localUser, setLocalUser, setAuthenticated} = useContext(appContext);  
     const navigate = useNavigate();
 
     const handleSignIn = (e) => {
         e.preventDefault();
+        
+        const {isValid, emailError, passwordError} = validateEmailAndPassword(email, password);
+        if(!isValid){
+            setEmailError(emailError);
+            setPasswordError(passwordError);
+            return;
+        }
+
+        setEmailError('')
+        setPasswordError('')
+        
         signIn(email, password)
         .then((res) => {
             setLocalUser(res);
@@ -34,26 +49,52 @@ const Login = () => {
         });
     }
 
-    return(
+    return (
+      <PageTransition>
         <div className={styles.loginContainer}>
-            <div className={styles.cardContainer}>
-                <Card>
-                    <AppLogo/>
-                    <Title subTitle="Sign in to manage your shared expenses">Welcome back</Title>
-                    <GoogleButton/>
-                    <DividerText>Or continue with email</DividerText>
+          <div className={styles.cardContainer}>
+            <Card>
+              <AppLogo />
+              <Title subTitle="Sign in to manage your shared expenses">
+                Welcome back
+              </Title>
+              <GoogleButton />
+              <DividerText>Or continue with email</DividerText>
 
-                    <form className={styles.form}>
-                        <Input name="Email" type="email" placeholder="you@example.com" onChange = {(e) => {setEmail(e.target.value)}} value={email}/>
-                        <Input name="Password" type="password" placeholder="••••••"  onChange = {(e) => {setPassword(e.target.value)}} value={password}/>
-                        <PrimaryButton onClick={handleSignIn}>Sign In</PrimaryButton>
-                        <LinkButton link= "signup" pageButton={true}>Don't have an account Sign up?</LinkButton>
-                    </form>
-                </Card>
+              <form className={styles.form}>
+                <Input
+                  name="Email"
+                  type="email"
+                  placeholder="you@example.com"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  error={emailError}
+                  value={email}
+                />
+                <Input
+                  name="Password"
+                  type="password"
+                  placeholder="••••••"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  error={passwordError}
+                  value={password}
+                />
+                <PrimaryButton onClick={handleSignIn}>Sign In</PrimaryButton>
+                <LinkButton link="signup" pageButton={true}>
+                  Don't have an account Sign up?
+                </LinkButton>
+              </form>
+            </Card>
 
-                <LinkButton link= "#">Continue as guest <AiOutlineArrowRight/> </LinkButton>
-            </div>
+            <LinkButton link="#">
+              Continue as guest <AiOutlineArrowRight />{" "}
+            </LinkButton>
+          </div>
         </div>
+      </PageTransition>
     );
 }
 

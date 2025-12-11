@@ -26,3 +26,8 @@
     font-weight: 600;
     font-size: var( --font-sm);
 }
+
+#errorText{
+    color:rgb(141, 1, 1);
+    font-size: var(--font-xs);
+}
