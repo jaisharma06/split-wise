@@ -20,3 +20,19 @@
     flex-direction: column;
     gap:20px;
 }
+
+.forgotWrapper{
+    width: 100%;
+    text-align: right;
+}
+
+.forgotLink{
+    text-decoration: none;
+    color: var(--primary-btn-color);
+    font-size: var(--font-sm);
+    font-weight: 500;
+}
+
+.forgotLink:hover{
+    text-decoration: underline;
+}

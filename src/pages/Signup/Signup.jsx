@@ -19,31 +19,37 @@ import { useState } from "react";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [nameError, setNameError] = useState("");
+  const [firstNameError, setFirstNameError] = useState("");
+  const [lastNameError, setLastNameError] = useState("");
 
   const validateInputs = () => {
     const passwordValidation = validatePassword(password);
     const emailValidation = validateEmail(email);
-    const nameValidation = validateName(name);
+    const firstValidation = validateName(firstName);
+    const lastValidation = validateName(lastName);
 
     if (
       !passwordValidation.isValidPassword ||
       !emailValidation.isValidEmail ||
-      !nameValidation.isValid
+      !firstValidation.isValid ||
+      !lastValidation.isValid
     ) {
       setEmailError(emailValidation.emailMessages[0]);
       setPasswordError(passwordValidation.passwordMessages[0]);
-      setNameError(nameValidation.messages[0]);
+      setFirstNameError(firstValidation.messages[0]);
+      setLastNameError(lastValidation.messages[0]);
       return false;
     }
 
     setPasswordError("");
     setEmailError("");
-    setNameError("");
+    setFirstNameError("");
+    setLastNameError("");
     return true;
   };
 
@@ -69,14 +75,24 @@ const Signup = () => {
 
             <form className={styles.form}>
               <Input
-                name="Full name"
+                name="First name"
                 type="text"
-                placeholder="John Doe"
-                error={nameError}
+                placeholder="John"
+                error={firstNameError}
                 onChange={(e) => {
-                  setName(e.target.value);
+                  setFirstName(e.target.value);
                 }}
-                value={name}
+                value={firstName}
+              />
+              <Input
+                name="Last name"
+                type="text"
+                placeholder="Doe"
+                error={lastNameError}
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                }}
+                value={lastName}
               />
               <Input
                 name="Email"

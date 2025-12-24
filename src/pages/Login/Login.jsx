@@ -35,7 +35,7 @@ const Login = () => {
         }
 
         setEmailError('')
-        setPasswordError('')
+        setPasswordError('')  
         
         signIn(email, password)
         .then((res) => {
@@ -82,6 +82,9 @@ const Login = () => {
                   error={passwordError}
                   value={password}
                 />
+                <div className={styles.forgotWrapper}>
+                  <a href="forgot" className={styles.forgotLink}>Forgot password?</a>
+                </div>
                 <PrimaryButton onClick={handleSignIn}>Sign In</PrimaryButton>
                 <LinkButton link="signup" pageButton={true}>
                   Don't have an account Sign up?
