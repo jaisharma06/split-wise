@@ -4,8 +4,12 @@ export const appContext = createContext('app-context');
 
 const AppContext = ({children}) => {
 
-    const [localUser, setLocalUser] = useState(null);
-    const [isAuthenticated, setAuthenticated] = useState(false);
+    // Initialize from localStorage if user chose "Remember me"
+    const stored = typeof window !== 'undefined' ? localStorage.getItem('localUser') : null;
+    const initialUser = stored ? JSON.parse(stored) : null;
+
+    const [localUser, setLocalUser] = useState(initialUser);
+    const [isAuthenticated, setAuthenticated] = useState(!!initialUser);
 
     return(
         <appContext.Provider value={{localUser, setLocalUser, isAuthenticated, setAuthenticated}}>

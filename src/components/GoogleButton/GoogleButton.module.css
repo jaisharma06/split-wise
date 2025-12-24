@@ -12,14 +12,14 @@
     padding: 10px 0;
     border-radius: var(--border-radius);
     border: 1px solid #e3e3e3  !important;
-    background-color: white;
+    background-color: var(--card-bg);
     cursor: pointer;
     transition: all 0.2s;
 }
 
 
 .googleBtn:hover{
-    background-color: rgb(243, 243, 243);
+    background-color: var(--muted-bg);
     transition: all 0.2s;
 }
 

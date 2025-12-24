@@ -1,5 +1,19 @@
 :root{
+    /* Professional color palette */
+    /* Primary theme (original blue) */
     --primary-btn-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
+    --primary-bg-soft: rgba(37,99,235,0.08);
+    --primary-hover-color: #1e40af; /* blue-800 for hover states */
+    --muted-bg: #f3f4f6;
+    --bg-color: #f5f7fb; /* subtle off-white background */
+    --card-bg: #ffffff;
+    --text-color: #111827; /* primary text */
+    --muted-color: #6b7280; /* muted text */
+    --success-color: #10b981; /* green */
+    --danger-color: #ef4444; /* red */
+    --danger-bg-soft: rgba(239,68,68,0.08);
+    --success-bg-soft: rgba(16,185,129,0.08);
+
     --border-radius: 10px;
     --font-xs:   clamp(0.55rem, 0.6vw, 0.85rem);
     --font-sm:   clamp(0.7rem, 0.8vw, 1rem);

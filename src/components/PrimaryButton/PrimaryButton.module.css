@@ -11,7 +11,7 @@
 }
 
 .primaryBtn:hover{
-    background-color: rgb(48 42 141);
+    background-color: var(--primary-hover-color);
     transition: all 0.2s;
 }
 

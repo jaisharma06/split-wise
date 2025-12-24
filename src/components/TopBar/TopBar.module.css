@@ -21,7 +21,7 @@
     border-radius: 100%;
     text-align: center;
     color: white;
-    background-color: rgb(255, 76, 103);
+    background-color: var(--primary-btn-color);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,3 +1,13 @@
+/* Arrow styles */
+.upArrow{
+    color: var(--success-color);
+}
+
+.downArrow{
+    color: var(--danger-color);
+}
+
+/* Other styles continue below */
 .homeContainer{
     width: 100%;
     min-height: 100vh;
@@ -68,8 +78,8 @@
 .accent .tileTitle{ color: rgba(255,255,255,0.9); }
 .accent .tileIcon{ background: rgba(255,255,255,0.15); }
 
-.positive .tileIcon{ background: rgba(34,197,94,0.15); color: rgb(34,197,94); }
-.negative .tileIcon{ background: rgba(239,68,68,0.08); color: rgb(239,68,68); }
+.positive .tileIcon{ background: var(--success-bg-soft); color: var(--success-color); }
+.negative .tileIcon{ background: var(--danger-bg-soft); color: var(--danger-color); }
 
 @media (min-width: 768px) {
     .userDuesContainer{

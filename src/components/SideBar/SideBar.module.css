@@ -1,13 +1,13 @@
 .sideBarContainer{
     display: none;
     height: 100vh;
-    width: 250px;
-    z-index: 100000;
-    background-color: white;
+    width: 260px;
+    z-index: 1000;
+    background-color: #ffffff;
     left: 0;
     top: 0;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    padding: 15px 15px 0 15px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    padding: 18px 18px 16px 18px;
     box-sizing: border-box;
     flex-direction: column;
 }
@@ -31,64 +31,72 @@
 }
 
 .profilePicture{
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
     text-align: center;
     color: white;
-    background-color: rgb(255, 76, 103);
+    background-color: var(--primary-btn-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.userMeta{ display:flex; flex-direction:column; }
+
 .userName {
-    font-size: var( --font-md);
+    font-size: var(--font-sm);
+    font-weight: 700;
+    color: #111827;
 }
 
 .usernameInitial{
-    font-size: var( --font-md);
+    font-size: var(--font-md);
+    font-weight: 700;
 }
 
+
 .sideBarMenu{
-    margin-top: 40px;
+    margin-top: 36px;
     display: flex;
-    flex-flow: column;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .sidebarMenuButton{
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     border: none!important;
     background-color: transparent;
-    font-size: var( --font-md);
+    font-size: var(--font-md);
     display: flex;
-    flex-flow: row;
-    flex-direction: row;
-    gap:10px;
-    color: rgb(110, 110, 110);
-    padding: 10px;
+    align-items: center;
+    gap:12px;
+    color: var(--muted-color);
+    padding: 10px 12px;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.06s;
 }
 
 .sidebarMenuButton:hover{
     cursor: pointer;
-    background-color: #e3e3e3;
-    color:rgb(46, 46, 46);
+    background-color: rgba(15, 23, 42, 0.03);
+    color: var(--text-color);
 }
 
 .sidebarMenuButton:active{
-    color: var(--primary-btn-color);
-    background-color: rgb(238, 238, 250);
+    transform: translateY(1px);
 }
 
 .sideBarMenuButtonActive{
     color: var(--primary-btn-color);
-    background-color: rgb(238, 238, 250);
+    background-color: var(--primary-bg-soft);
+    box-shadow: inset 4px 0 0 var(--primary-btn-color);
 }
+
+.menuIcon{ display:inline-flex; width:20px; height:20px; align-items:center; justify-content:center; font-size:18px; }
+.menuText{ display:inline-block; }
 
 @media(min-width: 1024px) {
  .sideBarContainer{
-    display: flex;
+     display: flex;
  }
 }

@@ -14,6 +14,7 @@ import { appContext } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import PageTransition from '../../utils/animations/PageTransition';
 import {validateEmailAndPassword } from '../../utils/validators/Validator';
+import { useEffect } from 'react';
 
 const Login = () => {
 
@@ -21,8 +22,17 @@ const Login = () => {
     const [password, setPassword] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [emailError, setEmailError] = useState("")
+    const [rememberMe, setRememberMe] = useState(false);
     const {localUser, setLocalUser, setAuthenticated} = useContext(appContext);  
     const navigate = useNavigate();
+
+    useEffect(() => {
+      // if context already has a stored user (from localStorage), prefill email and mark remember
+      if(localUser){
+        setEmail(localUser.email || '');
+        setRememberMe(true);
+      }
+    }, [localUser]);
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -40,7 +50,13 @@ const Login = () => {
         signIn(email, password)
         .then((res) => {
             setLocalUser(res);
-            setAuthenticated(true);
+          setAuthenticated(true);
+          // persist only if user checked Remember me
+          if(rememberMe){
+            try{ localStorage.setItem('localUser', JSON.stringify(res)); }catch(e){}
+          } else {
+            try{ localStorage.removeItem('localUser'); }catch(e){}
+          }
             navigate('/home');
             console.log(localUser);
         })
@@ -82,9 +98,14 @@ const Login = () => {
                   error={passwordError}
                   value={password}
                 />
-                <div className={styles.forgotWrapper}>
-                  <a href="forgot" className={styles.forgotLink}>Forgot password?</a>
-                </div>
+                  <div className={styles.forgotWrapper}>
+                    <label className={styles.rememberLabel}>
+                      <input type="checkbox" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} />
+                      <span> Remember me</span>
+                    </label>
+                    <a href="forgot" className={styles.forgotLink}>Forgot password?</a>
+                  </div>
+                
                 <PrimaryButton onClick={handleSignIn}>Sign In</PrimaryButton>
                 <LinkButton link="signup" pageButton={true}>
                   Don't have an account Sign up?

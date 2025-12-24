@@ -23,7 +23,9 @@
 
 .forgotWrapper{
     width: 100%;
-    text-align: right;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .forgotLink{
@@ -36,3 +38,6 @@
 .forgotLink:hover{
     text-decoration: underline;
 }
+
+.rememberLabel{ display:inline-flex; align-items:center; gap:8px; color: var(--muted-color); font-size: var(--font-sm); }
+.rememberLabel input{ width: 16px; height: 16px; }

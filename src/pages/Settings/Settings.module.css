@@ -11,7 +11,7 @@
 }
 
 .subTitle{
-    color: rgb(141, 140, 140);
+    color: var(--muted-color);
     text-transform: uppercase;
 }
 
@@ -27,7 +27,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: rgb(255, 108, 108);
+    background-color: var(--primary-btn-color);
 
     display: flex;
     flex-flow: row;
@@ -41,11 +41,11 @@
 }
 
 .logoutButton{
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     width: 100%;
-    background-color: rgb(252, 227, 227);
-    color:rgb(199, 14, 14);
-    border: 1px solid rgb(255, 194, 194);
+    background-color: var(--danger-bg-soft);
+    color:var(--danger-color);
+    border: 1px solid rgba(239,68,68,0.12);
     border-radius: var(--border-radius);
     font-size: var(--font-md);
     font-weight: 600;
@@ -60,7 +60,7 @@
 }
 
 .logoutButton:hover{
-    background-color: rgb(255, 194, 194);
+    background-color: rgba(239,68,68,0.12);
     cursor: pointer;
     transition: all 0.2s;
 }
