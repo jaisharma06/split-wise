@@ -1,121 +1,85 @@
 .homeContainer{
     width: 100%;
-    height: 100vh;
-    padding: 40px;
+    min-height: 100vh;
+    padding: 32px;
     box-sizing: border-box;
-
     display: flex;
-    flex-flow: column;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
+    background: var(--bg-color, #f7f8fb);
 }
 
 .userDuesContainer{
     width: 100%;
     display: flex;
-    flex-flow: column;
     flex-direction: column;
-    gap: 40px;
+    gap: 16px;
 }
 
-.dueCard{
-    width: 100%;
-    height: 200px;
-    border-radius: var(--border-radius);
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.tile{
     display: flex;
-    flex-flow: row;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
 }
 
-.totalDueCard{
-    background-color: var(--primary-btn-color) !important;
-}
-
-.leftSide, .rightSide{
-    height: 100%;
-}
-
-.rightSide{
-    width: 20%;
+.tile .tileBody{
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    font-size: var(--font-xxl);
-}
-
-.whiteColor{
-    color: rgba(255, 255, 255, 1);
-}
-
-.blackColor{
-    color: #323232;
-}
-
-.leftSide{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
     flex-direction: column;
-    gap:5px;
+    gap: 6px;
 }
 
-.greyColor{
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.totalBalanceTitle{
+.tileTitle{
     font-weight: 600;
-    font-size: var(--font-lg);
-    display: flex;
-    flex-flow: row;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    width: 100%;
+    font-size: var(--font-md);
+    color: #4b5563; /* muted dark */
 }
 
-.upArrow, .downArrow{
+.tileValue{
     font-size: var(--font-xl);
+    font-weight: 700;
+    color: #111827;
 }
 
-.upArrow{
-    color:rgb(115, 192, 0);
+.tileIcon{
+    width: 44px;
+    height: 44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
 }
 
-.downArrow{
-    color:rgb(192, 0, 0);
-
+.accent{
+    background: linear-gradient(90deg, var(--primary-btn-color), #5aa0ff 120%);
+    color: white;
+    border: none;
 }
 
-.iconContainer{
-    width: 30px;
-    height: 30px;
-    box-sizing: border-box;
-    padding: 5px;
-    border-radius: var(--border-radius);
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-lg);
-}
+.accent .tileValue{ color: white; }
+.accent .tileTitle{ color: rgba(255,255,255,0.9); }
+.accent .tileIcon{ background: rgba(255,255,255,0.15); }
 
-.largeFont{
-    font-size: var(--font-xl);
-}
+.positive .tileIcon{ background: rgba(34,197,94,0.15); color: rgb(34,197,94); }
+.negative .tileIcon{ background: rgba(239,68,68,0.08); color: rgb(239,68,68); }
 
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .userDuesContainer{
-        flex-flow: row;
         flex-direction: row;
     }
 
-    .dueCard{
-        width: 33.33%;
+    .tile{
+        width: calc(33.333% - 10px);
     }
 }
+
+/* bottom section */
+.sectionTitle{ font-size: var(--font-lg); color: #111827; }
